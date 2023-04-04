@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <label for="income" class="income">Gross Income</label>
+    <input type="number" name="gross income" id="income" /> <br />
+    <label for="gender"> Select your gender</label>
+    <select id="gender">
+      <option value="1">Male</option>
+      <option value="2">Female</option>
+    </select>
+    <br />
+
+    <button onclick="totalincome()">Calculate</button>
+    <br />
+
+    <p id="tax"></p>
+
+    <script>
+      let totalincome = function () {
+        let income = Number(document.getElementById("income").value);
+        let genderDD = document.getElementById("gender");
+        let gender = genderDD.options[genderDD.selectedIndex].text;
+        let TaxAmt;
+
+        if (income <= 50000) {
+          TaxAmt = 0;
+          document.getElementById("tax").innerHTML = income;
+        } else if (income >= 50001 && income <= 150000 && gender === "Male") {
+          TaxAmt = (income / 100) * 10;
+        } else if (income >= 50001 && income <= 150000 && gender === "Female") {
+          TaxAmt = (income / 100) * 7;
+        } else if (income >= 150001 && gender === "Male") {
+          TaxAmt = (income / 100) * 15;
+        } else if (income >= 150001 && gender === "Female") {
+          TaxAmt = (income / 100) * 10;
+        }
+        document.getElementById("tax").innerHTML =
+          "Total tax amount is: " + TaxAmt;
+      };
+    </script>
+  </body>
+</html>

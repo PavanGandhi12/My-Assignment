@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="gincome" class="income">Gross Income</label>
+    <input type="number" name="gross income" id="income" /> <br />
+    <button onclick="totalincome()">Calculate</button>
+    <p id="demo">total :</p>
+    <script>
+      let totalincome = function () {
+        let income = Number(document.getElementById("income").value);
+        debugger;
+        if (income <= 50000) {
+          debugger;
+          income += 1000;
+        } else if (income <= 150000) {
+          debugger;
+          income += 5000;
+        } else {
+          debugger;
+          income += 10000;
+        }
+        document.getElementById("demo").innerHTML = income;
+      };
+    </script>
+  </body>
+</html>

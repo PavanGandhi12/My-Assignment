@@ -1,0 +1,509 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+}
+#head{
+    width: 100%;
+    display: flex;
+  position: fixed;
+  top: 0%;
+}
+#head .heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #2c6431;
+}
+#head .heading .logo{
+    width: 20%;
+    text-align: center;
+    justify-content: center;
+}
+#head .heading .logo a{
+    text-decoration: none;
+}
+#head .heading .logo a img{
+    width: 40%;
+    justify-content: center;
+}
+#head .heading .menu{
+    width: 50%;
+    justify-content: center;
+}
+#head .heading .menu ul{
+    text-align: center;
+   
+}
+#head .heading .menu ul li{
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    padding: 13px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    font-family: sans-serif SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+#head .heading .search{
+    width: 30%;
+    justify-content: center;
+}
+#head .heading .search input{
+    width: 50%;
+    padding: 1.5%;
+    margin-top: 4%;
+}
+#head .heading .search i{
+font-size: 1.5em;
+color: white;
+margin-left: 2%;
+}
+.heading::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+#content{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+#content img{
+    width: 100%;
+    height: auto;
+}
+.menu::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.comtent::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .pic{
+    width: 100%;
+    position: relative;
+  }
+  .pic .epic{
+    float: left;
+    width: 25%;
+    height: 250px;
+    background-color: black;
+    justify-content: center;
+    border: 1px solid white;
+    margin: auto;
+  }
+  .pic .epic img{
+    justify-content: center;
+    padding-top: 10%;
+    align-items: center;
+    margin-left: 35%;
+  }
+  .pic .epic h3{
+    color: white;
+    text-align: center;
+    font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  }
+  .pic .epic h4{
+    text-align: center;
+    color:white;
+    margin-top: -10px;
+    opacity: 0;
+  } .epic:hover {
+    background-color: #2c6431; 
+    color: white !important;
+    transition: 1s;
+  }
+
+  .epic:hover h4{
+    color: white !important;
+    opacity: 1;
+  } 
+  /* .pic .epic h4:hover{
+    text-align: center;
+    color:white;
+  opacity: 1;
+  } */
+  .pic::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .container {
+    width: 100%;
+   height: auto;
+    position: relative;
+  }
+  .container img{
+    width: 100%;
+    height: auto;
+  }
+ .label{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 18%;
+    left: 47%;
+  }
+.label h1{
+  letter-spacing: -1.06px;
+  color: white;
+  line-height: .7;
+}
+  .label p{
+font-size: 18px;
+letter-spacing: -0.36px;
+color: white;
+  }
+  .label button{
+    padding: 14px 35px;
+    background-color: #2c6431;
+    color: white;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
+.main{
+  width: 100%;
+
+}
+.main  .fix{
+  width: 50%;
+  justify-content: center;
+  float: left;
+  position: relative;
+}
+.main  .fix img{
+  width: 100%;
+  position: relative;
+}
+ .fix .explore{
+  position: absolute;
+top: 20%;
+left: 65%;
+color: white;
+}
+.fix .explore h1{
+  letter-spacing: -1.06px;
+  color: white;
+  line-height: .7;
+}
+.fix  .explore  p{
+  font-size: 18px;
+  letter-spacing: -0.36px;
+  color: white;
+  line-height: 22px;
+    }
+    .explore button{
+      padding: 14px 35px;
+      background-color: #2c6431;
+      color: white;
+      border: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 18px;
+    }
+.main  .set{
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.main  .set img{
+  width: 100%;
+  position: relative;
+}
+.set .exact{
+  position: absolute;
+top: 20%;
+left: 63%;
+color: white;
+}
+.set .exact h1{
+  letter-spacing: -1.06px;
+  color: white;
+  line-height: .7;
+}
+.set  .exact  p{
+  font-size: 18px;
+  letter-spacing: -0.36px;
+  color: white;
+  line-height: 22px;
+    }
+    .exact button{
+      padding: 14px 35px;
+      background-color: #2c6431;
+      color: white;
+      border: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 18px;
+    }
+    .main::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .reaserch {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .reaserch img{
+      width: 100%;
+      height: auto;
+    }
+   .lab{
+      width: 30%;
+      height: auto;
+      position: absolute;
+      top: 18%;
+      left: 47%;
+    }
+  .lab h1{
+    letter-spacing: -1.06px;
+    color: white;
+    line-height: .7;
+  }
+    .lab p{
+  font-size: 18px;
+  letter-spacing: -0.36px;
+  color: white;
+    }
+    .lab button{
+      padding: 14px 35px;
+      background-color: #2c6431;
+      color: white;
+      border: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 18px;
+    }
+    .planet {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  .planet img{
+      width: 100%;
+      height: auto;
+    }
+   .pro{
+      width: 38%;
+      position: absolute;
+      top: 18%;
+      left: 12%;
+    }
+  .pro h1{
+    letter-spacing: -1.06px;
+    color: white;
+    line-height: .7;
+  }
+    .pro p{
+  font-size: 18px;
+  letter-spacing: -0.36px;
+  color: white;
+    }
+    .pro button{
+      padding: 14px 35px;
+      background-color: #2c6431;
+      color: white;
+      border: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 18px;
+    }
+    .look{
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  .look img{
+      width: 100%;
+      height: auto;
+    }
+   .book{
+      width: 30%;
+      position: absolute;
+      top: 18%;
+      left: 47%;
+    }
+  .book h1{
+    letter-spacing: -1.06px;
+    color: white;
+    line-height: .7;
+  }
+    .book p{
+  font-size: 18px;
+  letter-spacing: -0.36px;
+  color: white;
+    }
+    .book button{
+      padding: 14px 35px;
+      background-color: #2c6431;
+      color: white;
+      border: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 18px;
+    }
+    #step{
+      width: 100%;
+      height: 800px;
+       background-color: black;
+       justify-content: center;
+    }
+    #step .seven{
+      width: 100%;
+     height: 200px;
+     justify-content: center;
+     display: flex;
+    }
+    #step .seven .ten{
+      width: 80%;
+      height:200px ;
+      justify-content: center;
+      color: white;
+    }
+    #step .seven .ten h1{
+      font-size: 46px;
+    }
+    #step .seven .ten p{
+      line-height: 1.5;
+      margin-top: -15px;
+    }
+#step .cave{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+#step .cave .package{
+  width: 80%;
+  height: 500px;
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+#step .cave .package .space{
+  width: 25%;
+  height: 500px;
+  justify-content: center;
+  color: white;
+}
+#step .cave .package .space a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  line-height: 1.22;
+}
+#step .cave .package .sky{
+  width: 25%;
+  height: 500px;
+  justify-content: center;
+}
+#step .cave .package .sky a{
+ display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  line-height: 1.22;
+}
+#step  .cave .package .fifty{  
+    width: 50%;
+    height: 500px;
+    color: white;
+    justify-content: center;
+  }
+  #step  .cave .package .fifty .eleven{
+    width: 100%;
+    height: 250px;
+    justify-content: center;
+    display: flex;
+    font-size: 18px;
+  }
+  #step  .cave .package .fifty .eleven .tweet1{
+    width: 50%;
+    height: 250px;
+    justify-content: center;
+    color: white;
+  }
+  #step .cave .package .fifty .eleven .tweet1 a{
+   display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    line-height: 1.22;
+  }
+  #step  .cave .package .fifty .eleven .tweet2{
+    width: 50%;
+    height: 250px;
+    justify-content: center;
+    color: white;
+  }
+  #step .cave .package .fifty .eleven .tweet2 a{
+   display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+   line-height: 1.22;
+  }
+  #step  .cave .package .fifty .hundred{
+    width: 100%;
+    height: 250px;
+    justify-content: center;
+  }
+  #step  .cave .package .fifty .hundred .twelve{
+    width: 100%;
+    height: 250px;
+    justify-content: center;
+    color: white;
+  }
+  form h3{
+    font-size: 23px;
+  }
+.twelve form input{
+  padding:10px ;
+}
+.twelve form button{
+  width: 10%;
+  background-color:#2c6431;
+  color: white;
+  padding:11px ;
+  margin-left: -5px;
+}
+#step .footer{
+  width: 100%;
+ height: 50px;
+ justify-content: center;
+ display: flex;
+}
+#step .footer .foot{
+  width: 80%;
+  height: 50px;
+  display: flex;
+}
+#step .footer .foot .icons{
+  width: 50%;
+  height: 50px;;
+  justify-content: left;
+  color: white;
+}
+#step .footer .foot .icons i{
+  font-size: 1.4em;
+  margin: 15px;
+}
+#step .footer .foot .copyright{
+  width: 50%;
+  height: 50px;
+  justify-content: right;
+  text-align: right;
+  color: white;
+}

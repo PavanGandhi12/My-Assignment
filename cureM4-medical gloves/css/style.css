@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Open+Sans:ital@0;1&family=Poppins:wght@100;400&family=Rubik+Beastly&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Poppins:wght@100;400&family=Rubik+Beastly&family=Solway&display=swap");
+
+.solway {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Rubik Beastly", cursive;
+  font-family: "Solway", serif;
+}
+.josefin {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Rubik Beastly", cursive;
+  font-family: "Josefin Sans", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+:root {
+  --blue: #202b8f;
+  --white: #ffffff;
+  --yellow: rgb(213, 204, 69);
+  --grey: #aaaaaa61;
+}
+.color1 {
+  color: var(--white);
+}
+.color2 {
+  color: var(--yellow);
+}
+.color3 {
+  background-color: var(--grey);
+}
+.color4 {
+  color: var(--blue);
+}
+.padd {
+  padding: 140px 0;
+}
+.sets {
+  text-align: center;
+  background-color: var(--blue);
+  color: var(--yellow);
+}
+.mainhead {
+  background-color: var(--white);
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  width: 60%;
+  text-align: center;
+}
+ul {
+  margin: 0%;
+  padding: 0%;
+}
+.menu ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 15px;
+}
+.menu li a {
+  /* padding: 10px 15px; */
+  position: relative;
+  overflow: hidden;
+  color: var(--blue);
+}
+.menu li a:hover {
+  color: black;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  bottom: -10px;
+  left: 0;
+  border-radius: 10px;
+  background-color: var(--blue);
+  transition: 2s ease-in-out;
+}
+.menu li a:hover:after {
+  width: 100%;
+}
+
+.social a {
+  padding: 10px;
+  color: var(--blue);
+}
+.social a i {
+  transition: width 2s, height 2s, transform 2s;
+}
+.social a i:hover {
+  transform: rotateZ(360deg);
+}
+.contain {
+  position: relative;
+  background-color: var(--blue);
+}
+.gloves {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.medical {
+  padding: 25px;
+}
+.shop {
+  width: 25%;
+}
+.shop h1 {
+  font-size: 48px;
+  color: var(--white);
+  animation-name: medical;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes medical {
+  0% {
+    color: rgb(35, 214, 3);
+  }
+  25% {
+    color: rgb(0, 255, 191);
+  }
+  50% {
+    color: rgb(204, 0, 255);
+  }
+  100% {
+    color: rgb(255, 162, 0);
+  }
+}
+.shop strong {
+  display: block;
+  font-size: 36px;
+  color: var(--white);
+}
+.josh {
+  animation: dumble 2s linear infinite;
+}
+@keyframes dumble {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: rgba(249, 236, 58, 0.979);
+  }
+  50% {
+    background-color: rgb(173, 66, 187);
+  }
+  100% {
+    background-color: rgb(55, 160, 176);
+  }
+}
+strong del {
+  font-size: 18px;
+  margin-left: 10px;
+  vertical-align: top;
+  color: var(--white);
+}
+.mint {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 40px;
+  color: var(--white);
+  background-color: var(--yellow);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.mint::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: -100%;
+  background-color: orange;
+  transition: 2s ease-in-out;
+  z-index: -1;
+}
+.mint:hover:before {
+  left: 0%;
+}
+/* most popular catagories start here */
+.popular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.types {
+  width: 31%;
+  padding: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.types .text {
+  width: 50%;
+  padding: 30px;
+  background-color: var(--grey);
+}
+.text span {
+  width: 30%;
+  font-size: 18px;
+  display: block;
+  color: var(--blue);
+}
+.text a {
+  display: inline-block;
+  padding: 15px 25px;
+  margin-top: 20px;
+  border-radius: 30px;
+  background-color: var(--white);
+  color: var(--blue);
+}
+.types .imagepart {
+  width: 50%;
+}
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  color: var(--blue);
+}
+.frame {
+  width: 13%;
+  text-align: center;
+}
+.frame span {
+  font-size: 40px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.live {
+  padding: 40px 0;
+}
+/*  Antibacterial Medical Gloves */
+.open {
+  display: flex;
+  flex-wrap: wrap;
+}
+.easy {
+  width: 50%;
+}
+.draw {
+  width: 60%;
+}
+.review {
+  font-size: 48px;
+  color: var(--blue);
+}
+.draw .small {
+  display: inline-block;
+  margin-left: 100px;
+}
+.draw a {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 25px;
+  border-radius: 40px;
+  color: var(--white);
+  background-color: var(--yellow);
+}
+.ease {
+  width: 50%;
+}
+/* Featured products start here */
+.desk2 {
+  font-size: 35px;
+  color: var(--blue);
+  text-align: center;
+}
+.joy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.protect {
+  width: 70%;
+  color: var(--blue);
+}
+.protect strong {
+  display: block;
+}
+.protect i {
+  color: var(--yellow);
+}
+.hint2 {
+  overflow: hidden;
+}
+.hint2 img {
+  filter: grayscale(100%);
+}
+.hint2 img:hover {
+  transform: scale(1.3);
+  filter: none;
+}
+.hint {
+  animation-name: finite;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes finite {
+  0% {
+    filter: grayscale(100%);
+  }
+  25% {
+    filter: hue-rotate(150deg);
+  }
+  50% {
+    filter: sepia(80%);
+  }
+  75% {
+    filter: saturate(7);
+  }
+  100% {
+    filter: contrast(150%);
+  }
+}
+/* .cop {
+  position: relative;
+}
+.hint {
+  position: relative;
+  transition: 0.3s;
+}
+.hint img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+.hint::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba (#000, 0);
+  transition: 0.3s;
+}
+.cop:hover .hint:not(:hover) {
+  filter: grayscale(100%);
+  opacity: 0.75;
+}
+.cop:hover .hint:not(:hover)::after {
+  background-color: rgba(#000, 0.5);
+} */
+
+/* Effective section start here */
+.owl {
+  display: table;
+  width: 35%;
+  color: var(--blue);
+  margin: auto;
+  text-align: center;
+}
+.desk {
+  font-size: 35px;
+}
+.tin {
+  text-align: center;
+}
+.east {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: var(--blue);
+}
+.run {
+  width: 20%;
+  text-align: center;
+}
+.run span {
+  display: block;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+/* from the blog start here */
+.latest {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.basement {
+  width: 30%;
+  color: var(--blue);
+}
+.pols {
+  overflow: hidden;
+}
+.pols img {
+  max-width: 100%;
+  transition: 2s ease-in;
+}
+.pols img:hover {
+  transform: rotate(360deg);
+}
+
+.kite {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.hike {
+  /* display: inline-block; */
+  margin-left: 10px;
+}
+/* Latest review start here */
+.flag {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.nums {
+  width: 22%;
+  padding: 15px;
+  background-color: var(--white);
+  color: var(--blue);
+}
+.nums strong {
+  display: block;
+  margin-bottom: 20px;
+}
+/* Form section start here */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.spark {
+  width: 31%;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: var(--grey);
+  color: var(--blue);
+}
+.row2 {
+  margin-top: 25px;
+}
+.depart {
+  width: 100%;
+  border-radius: 30px;
+  background-color: var(--grey);
+  color: var(--blue);
+}
+form button {
+  padding: 15px 20px;
+  background-color: var(--yellow);
+  color: var(--white);
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+}
+::placeholder {
+  padding: 10px;
+}
+/* How can we help you? start here */
+.help {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--blue);
+}
+.disposal {
+  width: 40%;
+}
+.caves {
+  width: 60%;
+}
+.get {
+  width: 70%;
+}
+.get h1 {
+  font-size: 48px;
+  color: var(--blue);
+}
+.get strong {
+  font-size: 48px;
+}
+.get a {
+  color: var(--blue);
+  padding: 10px;
+}
+.site {
+  display: inline-block;
+  background-color: var(--white);
+  border-radius: 25px;
+  margin: 20px 0;
+}
+/* footer start here */
+.discount {
+  display: flex;
+  flex-wrap: wrap;
+}
+.raid {
+  width: 16%;
+}
+.raid li {
+  display: block;
+}
+.raid li a {
+  display: inline-block;
+  padding: 10px 0;
+  color: var(--blue);
+}
+.foot {
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 15px;
+}

@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.ship{
+ background-color:black;
+ text-align: center;
+ color: white;
+}
+.container{
+    max-width: 1200px;
+    margin: 0% auto;
+}
+.logo{
+    float: left;
+    margin: 0%;
+    }
+    /* For menu Bar*/
+.menu{
+    float: right;
+    margin-top: 50px;
+}
+.menu li{
+   display: inline-block;
+   margin-left: 10px;
+   color: rgb(255, 128, 0);
+   list-style:none ;
+}
+ li a{
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 15px;
+    }
+  li a:hover{
+   background-color: rgb(25, 187, 133);
+   color: rgb(255, 253, 253);
+   box-shadow:  0 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+.clearfix{
+clear: both;
+}
+.dropsmenu{
+    position: relative;
+    display: inline-block;
+}
+.submenu{
+    position: absolute;
+    display: none;
+    background-color: azure;
+    z-index: 1;
+}
+.submenu a{
+    color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.submenu a:hover{
+    background-color: rgb(56, 175, 56);
+}
+.dropsmenu:hover .submenu{
+    display: block;
+}
+  /* For h , p tag*/
+ .list{   
+   padding: 10px;
+ }
+ /*for button*/
+.button{
+    display: inline-block;
+        padding: 10px 20px;
+        background-color: rgb(202, 153, 89);
+        text-decoration: none;
+       margin: 10px 0 0 15px;
+        color: rgb(60, 67, 164);
+    }
+    .button:hover{
+        background-color: darkgrey;
+        color: black;
+        box-shadow:  0 5px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+    /* end button*/
+    .bought{
+        float: left;
+         width: 50%;
+      }
+     .pic{
+        float: left;
+        width: 50%;
+    }
+    /* Fpr all Images*/
+   .image{
+    max-width: 100%;
+   }
+   .imgwho{
+    border-radius: 50%;
+    width:400px;
+    height: 400px;
+   }
+   .align{
+    text-align: center;
+   }
+   .test{
+    text-align: center;
+    text-decoration: underline;
+   }
+   .best{
+    text-align: center;
+   }
+   .part{
+    float: left;
+    width: 30%;
+    border: 2px solid #000;
+    margin-left: 30px;
+}
+.nest{
+    border-bottom: 2px solid black;
+}
+.twist{
+    padding: 10px 0;
+    background-color:black;
+    color: white;
+    text-align: center;
+}
+/*for background color*/
+.colors{
+    background-color: lightgray;
+}
+/*for padding*/
+.kites{
+    padding: 40px 0 40px 0;
+}

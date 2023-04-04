@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table td {
+        padding: 20px;
+        /* background-color: aqua; */
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <th>Full name</th>
+      <th>age</th>
+      <tr>
+        <td id="0-name"></td>
+        <td id="0-age"></td>
+      </tr>
+      <tr>
+        <td id="1-name"></td>
+        <td id="1-age"></td>
+      </tr>
+      <tr>
+        <td id="2-name"></td>
+        <td id="2-age"></td>
+      </tr>
+    </table>
+    <div id="balance"></div>
+    <div id="demo"></div>
+    <script>
+      const users = [
+        {
+          firstName: "Piyush",
+          lastName: "Dhamecha",
+          age: 18,
+          balance: 1000,
+        },
+        {
+          firstName: "Jash",
+          lastName: "Shah",
+          age: 9,
+          balance: 5000,
+        },
+        {
+          firstName: "Naksh",
+          lastName: "Shah",
+          age: 4,
+          balance: 10000,
+        },
+      ];
+      fullname = "";
+      const newfunc = function (value, index, array) {
+        console.log({ value, index });
+        value.fullname = value.firstName + " " + value.lastName;
+        return value;
+        // return (fullname = firstName + lastName);
+      };
+
+      const newuser = users.map(newfunc);
+
+      //document.getElementById("demo").innerHTML = JSON.stringify(newuser);
+      //console.log(newuser);
+
+      const reducefunc = function (prevvalue, element) {
+        console.log(prevvalue);
+        debugger;
+        return parseInt(prevvalue + element.balance);
+      };
+      const totalof = users.reduce(reducefunc, 0);
+
+      document.getElementById("balance").innerHTML = totalof;
+      console.log(totalof);
+      let Name = "";
+      let age = "";
+      const newcallback = function (value, index) {
+        debugger;
+        console.log(value, index);
+        Name = index + "-name";
+        age = index + "-age";
+        // text2 += value.fullname;
+        // text3 += value.age;
+        // debugger;
+        document.getElementById(Name).innerText = value.fullname;
+        document.getElementById(age).innerText = value.age;
+      };
+      const foreach = newuser.forEach(newcallback);
+
+      console.log(foreach);
+    </script>
+  </body>
+</html>

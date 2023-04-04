@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background: linear-gradient(45deg, #49a09d, #5f2c82);
+        font-family: sans-serif;
+        font-weight: 100;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      table {
+        width: 800px;
+        border-collapse: collapse;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+      th {
+        text-align: left;
+      }
+      thead th {
+        background-color: #55608f;
+      }
+      tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      tbody td {
+        position: relative;
+      }
+      tbody td:hover:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <strong>Male candidates</strong>
+      <table>
+        <th>Full name</th>
+        <th>age</th>
+        <th>balance</th>
+        <tr>
+          <td id="male-0-name"></td>
+          <td id="male-0-age"></td>
+          <td id="male-0-balance"></td>
+        </tr>
+        <tr>
+          <td id="male-1-name"></td>
+          <td id="male-1-age"></td>
+          <td id="male-1-balance"></td>
+        </tr>
+        <tr>
+          <td id="male-2-name"></td>
+          <td id="male-2-age"></td>
+          <td id="male-2-balance"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><b>Total</b></td>
+          <td><b id="male-total"></b></td>
+        </tr>
+      </table>
+      <br />
+      <br />
+      <br />
+      <strong>Female candidates</strong>
+      <table>
+        <th>Full name</th>
+        <th>age</th>
+        <th>balance</th>
+        <tr>
+          <td id="female-0-name"></td>
+          <td id="female-0-age"></td>
+          <td id="female-0-balance"></td>
+        </tr>
+        <tr>
+          <td id="female-1-name"></td>
+          <td id="female-1-age"></td>
+          <td id="female-1-balance"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><b>Total</b></td>
+          <td><b id="female-total"></b></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      const users = [
+        {
+          firstName: "Hrithik",
+          lastName: "Roshan",
+          age: 22,
+          balance: 22000,
+          gender: "male",
+        },
+        {
+          firstName: "Alia",
+          lastName: "Bhatt",
+          age: 26,
+          balance: 25000,
+          gender: "female",
+        },
+        {
+          firstName: "Varun",
+          lastName: "Dhawan",
+          age: 23,
+          balance: 55000,
+          gender: "male",
+        },
+        {
+          firstName: "Rajkumar",
+          lastName: "Rao",
+          age: 23,
+          balance: 85000,
+          gender: "male",
+        },
+        {
+          firstName: "Kriti",
+          lastName: "Sanon",
+          age: 20,
+          balance: 33000,
+          gender: "female",
+        },
+      ];
+      //  map start here
+      const newfunc = function (value, index, array) {
+        console.log(value);
+        value.fullname = value.firstName + " " + value.lastName;
+        return value;
+      };
+      const newuser = users.map(newfunc);
+      console.log(newuser);
+      console.log(users);
+
+      const filterfunc = function (value, index, array) {
+        return value.gender === "male";
+      };
+      const newuser1 = users.filter(filterfunc);
+      console.log(newuser1);
+
+      const filterfunc2 = function (value, index, array) {
+        return value.gender === "female";
+      };
+      const newuser2 = users.filter(filterfunc2);
+      console.log(newuser2);
+
+      //   reduce start here
+      const reducefunc = function (prevvalue, value) {
+        return prevvalue + value.balance;
+      };
+      const totalbalance1 = newuser1.reduce(reducefunc, 0);
+      console.log(totalbalance1);
+      document.getElementById("male-total").innerText = totalbalance1;
+      const totalbalance2 = newuser2.reduce(reducefunc, 0);
+      console.log(totalbalance2);
+      document.getElementById("female-total").innerText = totalbalance2;
+
+      //   foreach start here
+      const newcallback = function (value, index, array) {
+        newName = "male-" + index + "-name";
+        newAge = "male-" + index + "-age";
+        newBalance = "male-" + index + "-balance";
+
+        document.getElementById(newName).innerText = value.fullname;
+        document.getElementById(newAge).innerText = value.age;
+        document.getElementById(newBalance).innerText = value.balance;
+      };
+      const newcallback2 = function (value, index, array) {
+        newName1 = "female-" + index + "-name";
+        newAge2 = "female-" + index + "-age";
+        newBalance3 = "female-" + index + "-balance";
+
+        document.getElementById(newName1).innerText = value.fullname;
+        document.getElementById(newAge2).innerText = value.age;
+        document.getElementById(newBalance3).innerText = value.balance;
+      };
+      const foreachfunc = newuser1.forEach(newcallback);
+      const foreachfunc2 = newuser2.forEach(newcallback2);
+    </script>
+  </body>
+</html>

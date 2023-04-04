@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <p>Fahrenheit to Celcius</p>
+        <input type="number" id="newinput" />
+        <button type="submit" onclick="toCelcius()">convert</button>
+      </div>
+      <div id="demo"></div>
+    </div>
+    <div>
+      <div>
+        <p>Celcius to Fahrenheit</p>
+        <input type="number" id="inputdata" />
+        <button type="submit" onclick="toFahrenheit()">convert</button>
+      </div>
+      <div id="demo2"></div>
+    </div>
+
+    <script>
+      // Fahrenheit to Celcius
+      const toCelcius = function () {
+        const inputtemp = document.getElementById("newinput").value;
+        const convertdata = (inputtemp - 32) / 1.8;
+        return (document.getElementById("demo").innerHTML = convertdata);
+      };
+      //   Celcius to Fahrenheit
+
+      const toFahrenheit = function () {
+        const inputvalue = document.getElementById("inputdata").value;
+        const converttemp = inputvalue * 1.8 + 32;
+        return (document.getElementById("demo2").innerHTML = converttemp);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    max-width: 1200px;
+    margin: 0% auto;
+}
+.ship{
+ background-color:black;
+ text-align: center;
+}
+.ship span{
+    width: 100%;
+    color: white;
+}
+.ship span i{
+    color: white;
+}
+/*logo start here */
+.packs{
+    background-color: cornsilk;
+}
+.logo{
+ background-color: cornsilk;
+}
+.logo img{
+max-width: 20%;
+}
+.content{
+justify-content: center;
+align-items: center;
+ display: flex;
+ background-color: cornsilk;
+}
+.content .bought{
+    width: 50%;
+}
+.jazz{
+    padding: 15px;
+}
+/*for button*/
+.button{
+    padding: 10px 20px;
+    background-color: rgb(202, 153, 89);
+    text-decoration: none;
+    color: rgb(60, 67, 164);
+}
+.button:hover{
+    background-color: darkgrey;
+    color: black;
+    box-shadow:  0 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+/*who we are start here */
+
+.best h2{ 
+    text-align: center;
+    text-decoration: underline;
+}
+.best p{
+    text-align: center;
+}
+.slice{   
+ display: flex;
+text-align: justify;
+}
+.slice .watt{
+    width: 50%;
+    margin-top: 20px;
+}
+
+/*Start other products here*/
+
+.products{
+    max-width: 1200px;
+    margin: 0% auto;
+ align-items: center;
+ display: flex;
+ justify-content: space-evenly;
+ background-color: cornsilk;
+}
+.products .steps{
+    width: 30%;
+    border: 2px solid burlywood;
+}
+.products .steps .downs{
+    width:100%;
+    position: relative;
+}
+.products .steps .downs img{
+  max-width: 100%;
+}
+.strick{
+    padding: 10px;
+}
+.strick h3{
+    font-size: 24px;
+    border-bottom: 2px solid black;
+}
+/*Start  About our products here*/
+.quick{
+ display: flex;
+}
+.quick .opt{
+    width: 50%;
+    margin-top: 20px;
+}
+.quick .opt h2{
+margin-left: 20px;
+}
+.quick .opt p{
+    width: 80%;
+    margin-left: 20px;
+text-align: justify;
+}
+.quick .tent{
+    width: 50%;
+    margin-top: 20px;
+}
+.quick .tent img{
+    width: 100%;
+}
+.kites{
+    padding: 40px 0 40px 0;
+}
